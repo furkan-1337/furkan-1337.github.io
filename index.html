@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolyom</title>
+    <title>Furkan Yaşar Çilkaya - Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -14,7 +14,8 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #e5e5e5;
+            background-color: #0a0a0a;
             overflow-x: hidden;
         }
 
@@ -23,10 +24,11 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
             z-index: 1000;
             transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(220, 38, 38, 0.1);
         }
 
         nav {
@@ -41,7 +43,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -55,14 +57,14 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: #e5e5e5;
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: #dc2626;
         }
 
         .nav-links a::after {
@@ -72,7 +74,7 @@
             height: 2px;
             bottom: -5px;
             left: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
             transition: width 0.3s ease;
         }
 
@@ -86,9 +88,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
             position: relative;
             overflow: hidden;
         }
@@ -100,16 +100,12 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="600" cy="100" r="1" fill="rgba(255,255,255,0.2)"/><circle cx="800" cy="300" r="1.5" fill="rgba(255,255,255,0.15)"/><circle cx="400" cy="600" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="900" cy="700" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
-            animation: float 20s infinite linear;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); }
-            100% { transform: translateY(-20px) rotate(360deg); }
+            background: radial-gradient(circle at 30% 50%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(220, 38, 38, 0.05) 0%, transparent 50%);
         }
 
         .hero-content {
+            text-align: center;
             position: relative;
             z-index: 2;
             animation: fadeInUp 1s ease;
@@ -130,34 +126,40 @@
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
+            color: #ffffff;
             animation: fadeInUp 1s ease 0.2s both;
         }
 
         .hero .subtitle {
             font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            margin-bottom: 0.5rem;
+            color: #dc2626;
+            font-weight: 600;
             animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #a3a3a3;
+            animation: fadeInUp 1s ease 0.6s both;
         }
 
         .cta-button {
             display: inline-block;
             padding: 15px 30px;
-            background: rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
             color: white;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 8px;
             font-weight: 600;
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            animation: fadeInUp 1s ease 0.6s both;
+            animation: fadeInUp 1s ease 0.8s both;
         }
 
         .cta-button:hover {
-            background: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
         }
 
         /* Sections */
@@ -165,6 +167,8 @@
             padding: 100px 5%;
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 10;
         }
 
         .section-title {
@@ -172,13 +176,26 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 3rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         /* About Section */
+        .about {
+            background: linear-gradient(135deg, #111111 0%, #0a0a0a 100%);
+        }
+
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -191,8 +208,13 @@
             max-width: 300px;
             height: 300px;
             border-radius: 20px;
-            object-fit: cover;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease;
         }
 
@@ -203,57 +225,63 @@
         .about-text {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: #666;
+            color: #a3a3a3;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
         }
 
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
         .skill-card {
-            background: white;
+            background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.1);
             transition: all 0.3s ease;
-            border: 1px solid rgba(102, 126, 234, 0.1);
         }
 
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            border-color: rgba(102, 126, 234, 0.3);
+            border-color: rgba(220, 38, 38, 0.3);
+            box-shadow: 0 15px 30px rgba(220, 38, 38, 0.1);
         }
 
         .skill-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 15px;
+            background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1rem;
             font-size: 1.5rem;
-            color: white;
         }
 
         .skill-card h3 {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
-            color: #333;
+            color: #ffffff;
         }
 
         .skill-card p {
-            color: #666;
+            color: #a3a3a3;
             line-height: 1.6;
         }
 
         /* Projects Section */
+        .projects {
+            background: linear-gradient(135deg, #111111 0%, #0a0a0a 100%);
+        }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -262,22 +290,23 @@
         }
 
         .project-card {
-            background: white;
+            background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.1);
             transition: all 0.3s ease;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border-color: rgba(220, 38, 38, 0.3);
+            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
         }
 
         .project-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -292,11 +321,11 @@
         .project-content h3 {
             font-size: 1.3rem;
             margin-bottom: 1rem;
-            color: #333;
+            color: #ffffff;
         }
 
         .project-content p {
-            color: #666;
+            color: #a3a3a3;
             margin-bottom: 1.5rem;
             line-height: 1.6;
         }
@@ -309,30 +338,27 @@
         }
 
         .tech-tag {
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
+            background: rgba(220, 38, 38, 0.1);
+            color: #dc2626;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 500;
+            border: 1px solid rgba(220, 38, 38, 0.2);
         }
 
         .project-link {
-            color: #667eea;
+            color: #dc2626;
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s ease;
         }
 
         .project-link:hover {
-            color: #764ba2;
+            color: #ffffff;
         }
 
         /* Contact Section */
-        .contact {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-
         .contact-content {
             text-align: center;
             max-width: 600px;
@@ -347,21 +373,22 @@
         }
 
         .contact-item {
-            background: white;
+            background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            border: 1px solid rgba(220, 38, 38, 0.1);
+            transition: all 0.3s ease;
         }
 
         .contact-item:hover {
             transform: translateY(-5px);
+            border-color: rgba(220, 38, 38, 0.3);
         }
 
         .contact-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -371,12 +398,22 @@
             font-size: 1.2rem;
         }
 
+        .contact-item h3 {
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #a3a3a3;
+        }
+
         /* Footer */
         footer {
-            background: #333;
-            color: white;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            color: #a3a3a3;
             text-align: center;
             padding: 2rem;
+            border-top: 1px solid rgba(220, 38, 38, 0.1);
         }
 
         /* Responsive Design */
@@ -419,13 +456,31 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #ef4444 0%, #991b1b 100%);
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">Portfolyo</div>
+            <div class="logo">FYC</div>
             <ul class="nav-links">
                 <li><a href="#home">Ana Sayfa</a></li>
                 <li><a href="#about">Hakkımda</a></li>
@@ -439,25 +494,26 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Merhaba, Ben [Adınız]</h1>
-            <p class="subtitle">Web Developer & UI/UX Designer</p>
+            <h1>Furkan Yaşar Çilkaya</h1>
+            <p class="subtitle">C# Developer & Reverse Engineering Enthusiast</p>
+            <p class="description">Game Hacking, Memory Management ve Low-Level Programming</p>
             <a href="#contact" class="cta-button">Benimle İletişime Geç</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section fade-in">
+    <section id="about" class="section about fade-in">
         <h2 class="section-title">Hakkımda</h2>
         <div class="about-content">
             <div>
-                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect fill='%23667eea' width='300' height='300' rx='20'/><circle cx='150' cy='120' r='40' fill='white'/><path d='M100 200 Q150 160 200 200 L200 280 Q150 270 100 280 Z' fill='white'/></svg>" alt="Profil Fotoğrafı" class="profile-image">
+                <div class="profile-image">👨‍💻</div>
             </div>
             <div class="about-text">
-                <p>Merhaba! Ben tutkulu bir web developer ve UI/UX designer'ım. Modern web teknolojileri kullanarak kullanıcı dostu ve görsel açıdan çekici web siteleri ve uygulamalar geliştiriyorum.</p>
-                <br>
-                <p>5 yılı aşkın deneyimimle, müşterilerimin hayallerini gerçeğe dönüştürüyor ve dijital dünyada güçlü bir varlık oluşturmalarına yardımcı oluyorum. Her proje benim için yeni bir macera ve öğrenme fırsatı.</p>
-                <br>
-                <p>Çalışmalarımda minimalist tasarım, temiz kod ve kullanıcı deneyimini ön planda tutuyorum.</p>
+                <p>Merhaba! Ben Furkan Yaşar Çilkaya, tutkulu bir C# Developer ve Reverse Engineering uzmanıyım. Özellikle game hacking, memory management ve low-level programming alanlarında derinlemesine çalışıyorum.</p>
+                
+                <p>47+ açık kaynak projesi ile GitHub'da aktif bir geliştiriciyim. Source Engine oyunları, DirectX overlay sistemleri ve çeşitli cheat engine projelerinde uzmanlaşmış durumdayım.</p>
+                
+                <p>Projelerimde temiz kod, performans optimizasyonu ve güvenlik odaklı yaklaşımları benimsiyor, sürekli öğrenme ve gelişim ilkesiyle çalışıyorum.</p>
             </div>
         </div>
     </section>
@@ -467,72 +523,111 @@
         <h2 class="section-title">Yeteneklerim</h2>
         <div class="skills-grid">
             <div class="skill-card">
-                <div class="skill-icon">🎨</div>
-                <h3>UI/UX Design</h3>
-                <p>Kullanıcı odaklı tasarımlar oluşturuyor, Figma ve Adobe XD ile profesyonel arayüzler geliştiriyorum.</p>
+                <div class="skill-icon">⚡</div>
+                <h3>C# & .NET Development</h3>
+                <p>Advanced C# programming, .NET Framework/Core, WinForms ve WPF ile masaüstü uygulaması geliştirme.</p>
             </div>
             <div class="skill-card">
-                <div class="skill-icon">💻</div>
-                <h3>Frontend Development</h3>
-                <p>React, Vue.js, HTML5, CSS3 ve JavaScript ile modern ve responsive web uygulamaları geliştiriyorum.</p>
+                <div class="skill-icon">🧠</div>
+                <h3>Reverse Engineering</h3>
+                <p>Memory analysis, process injection, API hooking ve binary analysis konularında uzmanlaşmış çalışmalar.</p>
             </div>
             <div class="skill-card">
-                <div class="skill-icon">⚙️</div>
-                <h3>Backend Development</h3>
-                <p>Node.js, Python ve veritabanı yönetimi ile güçlü backend sistemleri oluşturuyorum.</p>
+                <div class="skill-icon">🎮</div>
+                <h3>Game Hacking</h3>
+                <p>Source Engine, DirectX overlay, external/internal cheat development ve game security research.</p>
             </div>
             <div class="skill-card">
-                <div class="skill-icon">📱</div>
-                <h3>Mobile Development</h3>
-                <p>React Native ve Flutter kullanarak cross-platform mobil uygulamalar geliştiriyorum.</p>
+                <div class="skill-icon">💾</div>
+                <h3>Memory Management</h3>
+                <p>Low-level memory operations, pointer scanning, pattern searching ve dynamic memory allocation.</p>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section fade-in">
+    <section id="projects" class="section projects fade-in">
         <h2 class="section-title">Projelerim</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image">🛍️</div>
+                <div class="project-image">🧠</div>
                 <div class="project-content">
-                    <h3>E-Ticaret Platformu</h3>
-                    <p>Modern bir e-ticaret sitesi. Kullanıcı dostu arayüz, ödeme entegrasyonu ve admin paneli içeriyor.</p>
+                    <h3>Memory Read/Write Class</h3>
+                    <p>Advanced memory management library for external process operations with pattern scanning and pointer handling capabilities.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Stripe</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">WinAPI</span>
+                        <span class="tech-tag">Memory Management</span>
                     </div>
-                    <a href="#" class="project-link">Projeyi İncele →</a>
+                    <a href="https://github.com/Lufzys/Memory" class="project-link">GitHub'da İncele →</a>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image">📊</div>
+                <div class="project-image">🎯</div>
                 <div class="project-content">
-                    <h3>Dashboard Uygulaması</h3>
-                    <p>Veri görselleştirme ve analiz için geliştirilen interaktif dashboard uygulaması.</p>
+                    <h3>SEDumper - Source Engine Dumper</h3>
+                    <p>Source Engine interface dumping tool for reverse engineering and game modification purposes.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Source Engine</span>
+                        <span class="tech-tag">Interface Dumping</span>
                     </div>
-                    <a href="#" class="project-link">Projeyi İncele →</a>
+                    <a href="https://github.com/Lufzys/SEDumper" class="project-link">GitHub'da İncele →</a>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image">🎵</div>
+                <div class="project-image">🎮</div>
                 <div class="project-content">
-                    <h3>Müzik Streaming App</h3>
-                    <p>Spotify benzeri müzik streaming uygulaması. Playlist oluşturma ve sosyal özellikler içeriyor.</p>
+                    <h3>InternalCSharp - OpenGL Hook</h3>
+                    <p>OpenGL hooking framework for internal game modification with advanced rendering capabilities.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">React Native</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Redux</span>
-                        <span class="tech-tag">Expo</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">OpenGL</span>
+                        <span class="tech-tag">Hooking</span>
+                        <span class="tech-tag">DirectX</span>
                     </div>
-                    <a href="#" class="project-link">Projeyi İncele →</a>
+                    <a href="https://github.com/Lufzys/InternalCSharp" class="project-link">GitHub'da İncele →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🛰️</div>
+                <div class="project-content">
+                    <h3>CSGO External Radar (2D)</h3>
+                    <p>2D external radar system for CS:GO with real-time player tracking and map visualization.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">CS:GO</span>
+                        <span class="tech-tag">External</span>
+                        <span class="tech-tag">2D Graphics</span>
+                    </div>
+                    <a href="https://github.com/Lufzys/CSGO2DRadar" class="project-link">GitHub'da İncele →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🧰</div>
+                <div class="project-content">
+                    <h3>LFInput - Input Simulation</h3>
+                    <p>Advanced keyboard and mouse input simulation library with anti-detection mechanisms.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Input Simulation</span>
+                        <span class="tech-tag">WinAPI</span>
+                    </div>
+                    <a href="https://github.com/Lufzys/LFInput" class="project-link">GitHub'da İncele →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🪟</div>
+                <div class="project-content">
+                    <h3>Windows UI - Custom WinForms</h3>
+                    <p>Modern and customizable Windows Forms UI library with advanced styling capabilities.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">WinForms</span>
+                        <span class="tech-tag">UI Design</span>
+                        <span class="tech-tag">Custom Controls</span>
+                    </div>
+                    <a href="https://github.com/lysep-corp/WindowsUI" class="project-link">GitHub'da İncele →</a>
                 </div>
             </div>
         </div>
@@ -548,17 +643,17 @@
                 <div class="contact-item">
                     <div class="contact-icon">📧</div>
                     <h3>Email</h3>
-                    <p>ornek@email.com</p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <h3>Telefon</h3>
-                    <p>+90 555 123 45 67</p>
+                    <p>furkan@example.com</p>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">💼</div>
+                    <h3>GitHub</h3>
+                    <p>github.com/lufzys</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🌐</div>
                     <h3>LinkedIn</h3>
-                    <p>/in/kullaniciadi</p>
+                    <p>/in/furkanyasarcilkaya</p>
                 </div>
             </div>
         </div>
@@ -566,7 +661,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Portfolyo. Tüm hakları saklıdır.</p>
+        <p>&copy; 2025 Furkan Yaşar Çilkaya. Tüm hakları saklıdır.</p>
     </footer>
 
     <script>
@@ -574,9 +669,13 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
 
@@ -584,18 +683,18 @@
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'rgba(10, 10, 10, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(220, 38, 38, 0.1)';
             } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
                 header.style.boxShadow = 'none';
             }
         });
 
-        // Scroll animations
+        // Scroll animations with improved intersection observer
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
+            rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -606,15 +705,22 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
+        // Observe elements after DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
         });
 
-        // Parallax effect for hero section
+        // Remove parallax effect to prevent z-index issues
+        // Instead, add subtle scroll-based animations
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent && scrolled < window.innerHeight) {
+                heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+                heroContent.style.opacity = 1 - (scrolled / window.innerHeight);
+            }
         });
     </script>
 </body>
