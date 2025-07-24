@@ -155,11 +155,21 @@
             font-weight: 600;
             transition: all 0.3s ease;
             animation: fadeInUp 1s ease 0.8s both;
+            margin: 0 0.5rem;
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid #dc2626;
+        }
+
+        .cta-button.secondary:hover {
+            background: #dc2626;
         }
 
         /* Sections */
@@ -407,6 +417,16 @@
             color: #a3a3a3;
         }
 
+        .contact-item a {
+            color: #dc2626;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #ffffff;
+        }
+
         /* Footer */
         footer {
             background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
@@ -474,13 +494,43 @@
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(135deg, #ef4444 0%, #991b1b 100%);
         }
+
+        .github-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(220, 38, 38, 0.1);
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #dc2626;
+            display: block;
+        }
+
+        .stat-label {
+            color: #a3a3a3;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">FYC</div>
+            <div class="logo">Furkan.1337</div>
             <ul class="nav-links">
                 <li><a href="#home">Ana Sayfa</a></li>
                 <li><a href="#about">Hakkımda</a></li>
@@ -495,9 +545,12 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Furkan Yaşar Çilkaya</h1>
-            <p class="subtitle">C# Developer & Reverse Engineering Enthusiast</p>
-            <p class="description">Game Hacking, Memory Management ve Low-Level Programming</p>
-            <a href="#contact" class="cta-button">Benimle İletişime Geç</a>
+            <p class="subtitle">C# Developer</p>
+            <p class="description">Performans, Verimlilik ve Stabilite.</p>
+            <div>
+                <a href="#contact" class="cta-button">Benimle İletişime Geç</a>
+                <a href="https://github.com/furkan-1337" class="cta-button secondary" target="_blank">GitHub Profili</a>
+            </div>
         </div>
     </section>
 
@@ -509,11 +562,26 @@
                 <div class="profile-image">👨‍💻</div>
             </div>
             <div class="about-text">
-                <p>Merhaba! Ben Furkan Yaşar Çilkaya, tutkulu bir C# Developer ve Reverse Engineering uzmanıyım. Özellikle game hacking, memory management ve low-level programming alanlarında derinlemesine çalışıyorum.</p>
-                
-                <p>47+ açık kaynak projesi ile GitHub'da aktif bir geliştiriciyim. Source Engine oyunları, DirectX overlay sistemleri ve çeşitli cheat engine projelerinde uzmanlaşmış durumdayım.</p>
-                
-                <p>Projelerimde temiz kod, performans optimizasyonu ve güvenlik odaklı yaklaşımları benimsiyor, sürekli öğrenme ve gelişim ilkesiyle çalışıyorum.</p>
+                <p>Merhaba! Ben Furkan Yaşar Çilkaya, tutkulu bir C# geliştiricisiyim. Özellikle bellek yönetimi, düşük seviyeli programlama ve performans odaklı yazılım geliştirme konularına ilgi duyuyorum.</p>
+
+				<p>GitHub'da aktif olarak açık kaynak projeler geliştiriyorum. DirectX, grafik katmanları ve özel araç geliştirme alanlarında çeşitli sistemler üzerinde çalıştım.</p>
+
+				<p>Projelerimde temiz kod, optimizasyon ve güvenlik odaklı bir yaklaşımı benimsiyor; sürekli öğrenme ve gelişim prensibiyle ilerliyorum.</p>
+
+                <div class="github-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">1</span>
+                        <div class="stat-label">Açık Kaynak Proje</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">C#</span>
+                        <div class="stat-label">Ana Dil</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">2020+</span>
+                        <div class="stat-label">Aktif Geliştirici</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -527,109 +595,30 @@
                 <h3>C# & .NET Development</h3>
                 <p>Advanced C# programming, .NET Framework/Core, WinForms ve WPF ile masaüstü uygulaması geliştirme.</p>
             </div>
-            <div class="skill-card">
-                <div class="skill-icon">🧠</div>
-                <h3>Reverse Engineering</h3>
-                <p>Memory analysis, process injection, API hooking ve binary analysis konularında uzmanlaşmış çalışmalar.</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🎮</div>
-                <h3>Game Hacking</h3>
-                <p>Source Engine, DirectX overlay, external/internal cheat development ve game security research.</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">💾</div>
-                <h3>Memory Management</h3>
-                <p>Low-level memory operations, pointer scanning, pattern searching ve dynamic memory allocation.</p>
-            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="section projects fade-in">
-        <h2 class="section-title">Projelerim</h2>
+        <h2 class="section-title">Öne Çıkan Projelerim</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image">🧠</div>
+                <div class="project-image">📝</div>
                 <div class="project-content">
-                    <h3>Memory Read/Write Class</h3>
-                    <p>Advanced memory management library for external process operations with pattern scanning and pointer handling capabilities.</p>
+                    <h3>FOG - Furkan's Object Grammar</h3>
+                    <p>Lightweight configuration file parser for .NET applications with header-based structure and type-safe value retrieval.</p>
                     <div class="project-tech">
                         <span class="tech-tag">C#</span>
-                        <span class="tech-tag">WinAPI</span>
-                        <span class="tech-tag">Memory Management</span>
+                        <span class="tech-tag">.NET</span>
+                        <span class="tech-tag">Parser</span>
+                        <span class="tech-tag">Configuration</span>
                     </div>
-                    <a href="https://github.com/Lufzys/Memory" class="project-link">GitHub'da İncele →</a>
+                    <a href="https://github.com/furkan-1337/FOG" class="project-link">GitHub'da İncele →</a>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">🎯</div>
-                <div class="project-content">
-                    <h3>SEDumper - Source Engine Dumper</h3>
-                    <p>Source Engine interface dumping tool for reverse engineering and game modification purposes.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Source Engine</span>
-                        <span class="tech-tag">Interface Dumping</span>
-                    </div>
-                    <a href="https://github.com/Lufzys/SEDumper" class="project-link">GitHub'da İncele →</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">🎮</div>
-                <div class="project-content">
-                    <h3>InternalCSharp - OpenGL Hook</h3>
-                    <p>OpenGL hooking framework for internal game modification with advanced rendering capabilities.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">OpenGL</span>
-                        <span class="tech-tag">Hooking</span>
-                        <span class="tech-tag">DirectX</span>
-                    </div>
-                    <a href="https://github.com/Lufzys/InternalCSharp" class="project-link">GitHub'da İncele →</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">🛰️</div>
-                <div class="project-content">
-                    <h3>CSGO External Radar (2D)</h3>
-                    <p>2D external radar system for CS:GO with real-time player tracking and map visualization.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">CS:GO</span>
-                        <span class="tech-tag">External</span>
-                        <span class="tech-tag">2D Graphics</span>
-                    </div>
-                    <a href="https://github.com/Lufzys/CSGO2DRadar" class="project-link">GitHub'da İncele →</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">🧰</div>
-                <div class="project-content">
-                    <h3>LFInput - Input Simulation</h3>
-                    <p>Advanced keyboard and mouse input simulation library with anti-detection mechanisms.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Input Simulation</span>
-                        <span class="tech-tag">WinAPI</span>
-                    </div>
-                    <a href="https://github.com/Lufzys/LFInput" class="project-link">GitHub'da İncele →</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">🪟</div>
-                <div class="project-content">
-                    <h3>Windows UI - Custom WinForms</h3>
-                    <p>Modern and customizable Windows Forms UI library with advanced styling capabilities.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">WinForms</span>
-                        <span class="tech-tag">UI Design</span>
-                        <span class="tech-tag">Custom Controls</span>
-                    </div>
-                    <a href="https://github.com/lysep-corp/WindowsUI" class="project-link">GitHub'da İncele →</a>
-                </div>
-            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="https://github.com/furkan-1337?tab=repositories" class="cta-button" target="_blank">Tüm Projelerimi Görüntüle</a>
         </div>
     </section>
 
@@ -637,23 +626,18 @@
     <section id="contact" class="section contact fade-in">
         <div class="contact-content">
             <h2 class="section-title">İletişime Geçin</h2>
-            <p>Bir projeniz mi var? Birlikte harika şeyler yapalım!</p>
+            <p>Bir projeniz mi var ya da iş birliği yapmak istiyorsunuz? Benimle iletişime geçmekten çekinmeyin!</p>
             
             <div class="contact-info">
                 <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email</h3>
-                    <p>furkan@example.com</p>
-                </div>
-                <div class="contact-item">
                     <div class="contact-icon">💼</div>
                     <h3>GitHub</h3>
-                    <p>github.com/lufzys</p>
+                    <p><a href="https://github.com/furkan-1337" target="_blank">github.com/furkan-1337</a></p>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon">🌐</div>
-                    <h3>LinkedIn</h3>
-                    <p>/in/furkanyasarcilkaya</p>
+                    <div class="contact-icon">💬</div>
+                    <h3>Discord</h3>
+                    <p>lufzys1337</p>
                 </div>
             </div>
         </div>
@@ -662,6 +646,10 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Furkan Yaşar Çilkaya. Tüm hakları saklıdır.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+            <a href="https://github.com/furkan-1337" style="color: #dc2626; text-decoration: none;" target="_blank">GitHub</a> • 
+            <a href="#" style="color: #dc2626; text-decoration: none;">Portfolio</a>
+        </p>
     </footer>
 
     <script>
@@ -712,8 +700,7 @@
             });
         });
 
-        // Remove parallax effect to prevent z-index issues
-        // Instead, add subtle scroll-based animations
+        // Hero parallax effect
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const heroContent = document.querySelector('.hero-content');
