@@ -57,7 +57,6 @@
                     <a href="https://github.com/furkan-1337" target="_blank" class="btn secondary">GitHub Profile</a>
                 </div>
             </div>
-            <!-- Removed side graphic for centered focus -->
         </section>
 
         <section id="about" class="about">
@@ -66,26 +65,22 @@
                 <div class="about-content">
                     <div class="about-text" data-aos="fade-right">
                         <p>
-                            I am a passionate software developer specializing in backend architecture, desktop
-                            applications,
-                            and low-level programming. With deep expertise in <strong>C# (.NET)</strong> and
-                            <strong>C++</strong>,
-                            I create high-performance tools, internal frameworks, and system-level utilities.
+                            I am a software developer obsessed with <strong>high-performance code</strong> and <strong>system-level programming</strong>.
+                            With deep expertise in <strong>C# (.NET)</strong> and <strong>C++</strong>,
+                            I specialize in Reverse Engineering, Framework Development, and Compiler/Interpreted Language Design.
                         </p>
                         <p>
-                            From creating custom config parsers like <strong>fog</strong> to developing advanced frame
-                            generation
-                            solutions like <strong>LFG</strong>, I enjoy pushing the boundaries of what's possible in
-                            software.
+                            From building custom interpreted languages like <strong>Quartz</strong> to developing advanced frame
+                            generation solutions like <strong>LFG</strong>, I enjoy solving complex technical challenges at the OS level.
                         </p>
                     </div>
                     <div class="skills-grid" data-aos="fade-left">
                         <div class="skill-card"><i class="fas fa-code"></i><span>C#</span></div>
                         <div class="skill-card"><i class="fas fa-copyright"></i><span>C++</span></div>
+                        <div class="skill-card"><i class="fas fa-terminal"></i><span>Language Design</span></div>
                         <div class="skill-card"><i class="fas fa-gamepad"></i><span>DirectX 11</span></div>
                         <div class="skill-card"><i class="fas fa-microchip"></i><span>Optical Flow</span></div>
-                        <div class="skill-card"><i class="fab fa-windows"></i><span>Old School .NET</span></div>
-                        <div class="skill-card"><i class="fas fa-memory"></i><span>Hooking</span></div>
+                        <div class="skill-card"><i class="fas fa-memory"></i><span>Reverse Engineering</span></div>
                         <div class="skill-card"><i class="fab fa-git-alt"></i><span>Git</span></div>
                         <div class="skill-card"><i class="fas fa-desktop"></i><span>ImGui</span></div>
                     </div>
@@ -98,63 +93,76 @@
                 <h2 class="section-title" data-aos="fade-up">My <span class="highlight">Projects</span></h2>
                 <div class="projects-grid" id="projects-container">
 
-                    <!-- New Major Projects -->
+                    <!-- LFG -->
                     <div class="project-card" data-aos="zoom-in">
                         <div class="project-image">
                             <div class="placeholder-img">LFG</div>
                         </div>
                         <div class="project-info">
                             <h3>LFG Frame Gen</h3>
-                            <p>Universal DirectX 11 Frame Generation & Upscaling solution. Features Optical Flow, Frame
-                                Interpolation, and RCAS integration.</p>
+                            <p>Universal DirectX 11 Frame Generation & Upscaling solution. Features Optical Flow, Frame Interpolation, and RCAS integration.</p>
                             <div class="project-tags">
                                 <span>C++</span><span>DirectX 11</span><span>Optical Flow</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/furkan-1337/LFG" target="_blank"><i
-                                        class="fab fa-github"></i> View Code</a>
+                                <a href="https://github.com/furkan-1337/LFG" target="_blank"><i class="fab fa-github"></i> View Code</a>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Quartz -->
                     <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="project-image">
+                            <div class="placeholder-img">Quartz</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Quartz Language</h3>
+                            <p>High-performance interpreted programming language with native FFI, low-level manual memory management, and OOP support.</p>
+                            <div class="project-tags">
+                                <span>C#</span><span>Interpreter</span><span>FFI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/furkan-1337/Quartz" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VMemLib -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="project-image">
+                            <div class="placeholder-img">VMemLib</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>VMemLib</h3>
+                            <p>A specialized library for external process memory manipulation, designed for research and memory-level interactions.</p>
+                            <div class="project-tags">
+                                <span>C#</span><span>Memory</span><span>Reverse Engineering</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/furkan-1337/VMemLib" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Internal Framework -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
                         <div class="project-image">
                             <div class="placeholder-img">Internal FW</div>
                         </div>
                         <div class="project-info">
                             <h3>Internal Framework</h3>
-                            <p>Modular DirectX 11 internal hooking framework with ImGui integration, input handling, and
-                                debug capabilities.</p>
+                            <p>Modular DirectX 11 internal hooking framework with ImGui integration, input handling, and debug capabilities.</p>
                             <div class="project-tags">
                                 <span>C++</span><span>Hooking</span><span>ImGui</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/furkan-1337/internal-framework" target="_blank"><i
-                                        class="fab fa-github"></i> View Code</a>
+                                <a href="https://github.com/furkan-1337/internal-framework" target="_blank"><i class="fab fa-github"></i> View Code</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Existing Projects -->
-                    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="project-image">
-                            <div class="placeholder-img">FOG</div>
-                        </div>
-                        <div class="project-info">
-                            <h3>FOG Parser</h3>
-                            <p>Furkan's Object Grammar: A lightweight, type-safe configuration parser for .NET
-                                applications.</p>
-                            <div class="project-tags">
-                                <span>C#</span><span>Parser</span><span>.NET</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/furkan-1337/fog" target="_blank"><i
-                                        class="fab fa-github"></i> View Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+                    <!-- WebCore -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
                         <div class="project-image">
                             <div class="placeholder-img">WebCore</div>
                         </div>
@@ -165,8 +173,7 @@
                                 <span>C#</span><span>WebView2</span><span>Hybrid</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/furkan-1337/WebCore" target="_blank"><i
-                                        class="fab fa-github"></i> View Code</a>
+                                <a href="https://github.com/furkan-1337/WebCore" target="_blank"><i class="fab fa-github"></i> View Code</a>
                             </div>
                         </div>
                     </div>
@@ -179,7 +186,6 @@
                 <h2 class="section-title centered" data-aos="fade-up">Get In <span class="highlight">Touch</span></h2>
                 <div class="contact-content centered" data-aos="fade-up">
                     <p>Check out my latest work and contributions on GitHub.</p>
-
                     <div class="social-links lone-icon">
                         <a href="https://github.com/furkan-1337" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
@@ -189,13 +195,12 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Furkan-1337. All rights reserved.</p>
+        <p>&copy; 2024 furkan-1337. All rights reserved.</p>
     </footer>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
